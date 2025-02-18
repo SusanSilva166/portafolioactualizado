@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        PORTAFOLIO WEB
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <main class="row">
+            <header class="header-contenido">
+                <nav>
+                  <a href="index.html" class="col-6">
+                    <img src="images/logo.png" class="animate__animated animate__backInUp logo">
+                  </a>
+              
+                    <a href="index.html" class="animate__animated animate__backInUp col-2 btn">
+                        <h2>Inicio</h2>
+                    </a>
+                    <a href="servicios.html" class="animate__animated animate__backInUp col-2 btn">
+                        <h2>Servicios</h2>
+                    </a>
+                    
+                    <a href="blog.html" class="animate__animated animate__backInUp col-2 btn">
+                      <h2>Blog</h2>
+                  </a>
+                  <a href="contacto.html" class="animate__animated animate__backInUp col-2 btn">
+                    <h2>Contacto</h2>
+                </a>
+                </nav>
+            </header>
+        </main>
+    </div>
+<div class="row">
+    <section class="servicios">
+    
+        <div class="servicios-container">
+            <!-- 16 botones (4x4) -->
+            <div class="animate__animated animate__backInUp animate__delay-1s servicio" onclick="toggleInfo(1)">
+                <img src="images/camara.jpg" alt="Servicio 1">
+                <p>Fotografía</p>
+            </div>
+            <div class="animate__animated animate__backInUp animate__delay-1s servicio" onclick="toggleInfo(2)">
+                <img src="images/photoshop.png" alt="Servicio 2">
+                <p> Photoshop</p>
+            </div>
+            <div class="animate__animated animate__backInUp animate__delay-1s servicio" onclick="toggleInfo(3)">
+                <img src="images/htmll.png" alt="Servicio 3">
+                <p>Servicio 3</p>
+            </div>
+            <div class="animate__animated animate__backInUp animate__delay-1s servicio" onclick="toggleInfo(4)">
+                <img src="images/premiere.avif" alt="Servicio 4">
+                <p>Servicio 4</p>
+            </div>
+        </div>
+
+        <!-- Secciones de información -->
+        <div id="info1" class="info-servicio">
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/velas.jpg" alt="Información Servicio 1">
+                </div>
+                <div class="col-4">
+                    <img src="images/mar.jpg" alt="Información Servicio 1">
+                </div>
+                <div class="col-4">
+                    <img src="images/amanecer.jpg" alt="Información Servicio 1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/coco.jpg" alt="Información Servicio 1">
+                </div>
+                <div class="col-4">
+                    <img src="images/ojo.jpg" alt="Información Servicio 1">
+                </div>
+                <div class="col-4">
+                    <img src="images/piscna.jpg" alt="Información Servicio 1">
+                </div>
+            </div>
+           
+            
+
+
+        </div>
+        <div id="info2" class="info-servicio">
+            <div class="row">
+                <div class="col-4"><img src="images/velasedt.jpg" alt="Información Servicio 2"></div>
+                <div class="col-4"> <img src="images/maredit.jpg" alt="Información Servicio 2"></div>
+                <div class="col-4"> <img src="images/amaneceredit.jpg" alt="Información Servicio 2"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"><img src="images/cocoedit.jpg" alt="Información Servicio 2"></div>
+                <div class="col-4"> <img src="images/ojoedit.jpg" alt="Información Servicio 2"></div>
+                <div class="col-4"> <img src="images/piscinaedt.jpg" alt="Información Servicio 2"></div>
+            </div>
+        </div>
+
+        <div id="info3" class="info-servicio">
+            <div class="row">
+                <div class="col"><a href="https://susansilva166.github.io/ajedrezAnimado/" class="animated-button">Ajedrez</a></div>
+                <div class="col"><a href="https://susansilva166.github.io/videojuego/" class="animated-button">Videojuego</a></div>
+                <div class="col"><a href="https://susansilva166.github.io/simpsonconbootstrapsusan/" class="animated-button">Simpsons</a></div>
+            </div>
+           
+        
+        
+        </div>
+        <div id="info4" class="info-servicio">
+            <div class="row">
+                <div class="col-6"><video style="max-width: 100%; height: auto;" controls>
+                    <source src="images/Manchas del pasado (Combo pato).mp4" type="video/mp4">
+                </video></div>
+            </div>
+        </div>
+                
+           
+     
+        <!-- Repite para los demás servicios (info3 a info16) -->
+    </section>
+
+    <script>
+        function toggleInfo(servicioNum) {
+            var info = document.getElementById('info' + servicioNum);
+            if (info.style.display === "none" || info.style.display === "") {
+                // Oculta todas las secciones de información primero
+                var allInfo = document.querySelectorAll('.info-servicio');
+                allInfo.forEach(function(element) {
+                    element.style.display = "none";
+                });
+                // Muestra la sección de información seleccionada
+                info.style.display = "block";
+                // Desplaza la página hasta la descripción
+                info.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+    </script>
+</div>
+
+
+
+
+
+    <header class="header content">
+        <div class="header-video">
+            <video src="images/Grabación 2024-12-12 134851.mp4" width="1000px" height="1000px" autoplay></video>
+        </div>
+        <div class="header-overlay"></div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
